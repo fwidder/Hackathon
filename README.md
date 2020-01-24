@@ -44,9 +44,11 @@ Step 1: run "build.sh"
 ./build.sh
 ```
 
-...
+Step 2: ...
 
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
+* [Spring](https://spring.io/) - Server Framework
+* [Angular](https://angular.io/) - Web Framework
 * ...
