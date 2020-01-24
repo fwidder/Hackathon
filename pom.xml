@@ -12,7 +12,7 @@
         <relativePath />
     </parent>
     <modules>
-        <module>hackathon-server</module>
         <module>hackathon-web</module>
+        <module>hackathon-server</module>
     </modules>
 </project>
