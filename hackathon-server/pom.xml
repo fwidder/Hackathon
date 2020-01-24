@@ -78,8 +78,8 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>auto-clean</id>
-						<phase>initialize</phase>
+						<id>clean-web</id>
+						<phase>validate</phase>
 						<goals>
 							<goal>clean</goal>
 						</goals>
@@ -97,7 +97,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>copy-resources</id>
+						<id>copy-web</id>
 						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
