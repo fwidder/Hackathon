@@ -1,10 +1,8 @@
 #!/bin/bash
 # Clean up
 mvn clean
-# Run Tests
-mvn test
-# Build Project
-mvn install -DskipTests=true
+# Build Project and run Tests
+mvn install
 # create target dir
 mkdir -p ./target
 # copy full jar to target folder
