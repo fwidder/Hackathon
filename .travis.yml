@@ -8,7 +8,7 @@ node_js:
 addons:
   chrome: stable
 before_cache:
-  - "rm -rf $HOME/.m2/repository/com/fw/hackathon"
+  - "rm -frv $HOME/.m2/repository/com/fw/hackathon"
 cache:
   directories:
     - "hackathon-web/src/main/web/node"

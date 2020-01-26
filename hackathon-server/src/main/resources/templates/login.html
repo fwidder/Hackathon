@@ -1,21 +1,43 @@
-<html>
-<head></head>
-<body>
+<!doctype html>
+<html lang='en' xmlns:th='http://www.thymeleaf.org'>
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+    <!-- Bootstrap CSS -->
+    <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+          integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' rel='stylesheet'>
+    <title>Login</title>
+</head>
+<body style='max-width: 35%; margin: 0 auto !important;; float: none !important;'>
 <h1>Login</h1>
-<form name='login' action="perform_login" method='POST'>
-    <table>
-        <tr>
-            <td>User:</td>
-            <td><input type='text' name='username' value=''></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input type='password' name='password' /></td>
-        </tr>
-        <tr>
-            <td><input name="submit" type="submit" value="submit" /></td>
-        </tr>
-    </table>
+<div class='alert alert-success' role='alert' th:if='${param.logout}'>Logout was Successful!</div>
+<div class='alert alert-danger' role='alert' th:if='${param.error}'>Username and Password combination is wrong!</div>
+<form action='/perform_login' method='POST' name='login'>
+    <div class='input-group mb-2'>
+        <div class='input-group-prepend'>
+            <div class='input-group-text' style='width: 100px'>Username:</div>
+        </div>
+        <input class='form-control' id='username' name='username' type='text'>
+    </div>
+    <div class='input-group mb-2'>
+        <div class='input-group-prepend'>
+            <div class='input-group-text' style='width: 100px'>Password:</div>
+        </div>
+        <input class='form-control' id='password' name='password' type='password'>
+    </div>
+    <input class='btn btn-primary btn-block' name='submit' type='submit' value='submit'/>
 </form>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin='anonymous'
+        integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+        src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script crossorigin='anonymous'
+        integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1'
+        src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+<script crossorigin='anonymous'
+        integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
 </body>
 </html>
