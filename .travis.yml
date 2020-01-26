@@ -17,6 +17,6 @@ install:
   - "npm install -g @angular/cli"
 before_script:
   - "sudo chmod +x build.sh"
-  - "sudo chmod +x run.sh.sh"
+  - "sudo chmod +x run.sh"
 script:
   - "build.sh"
