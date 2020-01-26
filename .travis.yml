@@ -19,4 +19,4 @@ before_script:
   - "sudo chmod +x build.sh"
   - "sudo chmod +x run.sh"
 script:
-  - "build.sh"
+  - "./build.sh"
