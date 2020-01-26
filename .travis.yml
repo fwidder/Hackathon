@@ -4,11 +4,10 @@ language: java
 jdk:
   - openjdk11
 node_js:
-  - "13"
+  - 13
 addons:
   chrome: stable
 cache:
-  - npm
   directories:
     - "hackathon-web/src/main/web/node"
     - "hackathon-web/src/main/web/node-modules"
