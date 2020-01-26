@@ -1,6 +1,10 @@
 #!/bin/bash
-# run maven build
-mvn install
+# Clean up
+mvn clean
+# Run Tests
+mvn test
+# Build Project
+mvn install -DskipTests=true
 # create target dir
 mkdir -p ./target
 # copy full jar to target folder

@@ -4,19 +4,20 @@ language: java
 jdk:
   - openjdk11
 node_js:
-  - '13'
+  - "13"
 addons:
   chrome: stable
 cache:
   - npm
   directories:
-    - 'hackathon-web/src/main/web/node'
-    - 'hackathon-web/src/main/web/node-modules'
-    - '$HOME/.m2'
-    - '/home/travis/.sonar/cache'
+    - "hackathon-web/src/main/web/node"
+    - "hackathon-web/src/main/web/node-modules"
+    - "$HOME/.m2"
+    - "/home/travis/.sonar/cache"
 install:
-  - 'npm install -g @angular/cli'
+  - "npm install -g @angular/cli"
+before_script:
+  - "sudo chmod +x build.sh"
+  - "sudo chmod +x run.sh.sh"
 script:
-  - 'mvn clean'
-  - 'mvn test'
-  - 'mvn install -DskipTests=true'
+  - "build.sh"
