@@ -7,12 +7,13 @@ node_js:
   - 13
 addons:
   chrome: stable
+before_cache:
+  - "rm -rf $HOME/.m2/repository/com/fw/hackathon"
 cache:
   directories:
     - "hackathon-web/src/main/web/node"
     - "hackathon-web/src/main/web/node-modules"
     - "$HOME/.m2"
-    - "!$HOME/.m2/repository/com/fw/hackathon"
 install:
   - "npm install -g @angular/cli"
 before_script:
